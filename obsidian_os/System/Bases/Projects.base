@@ -1,0 +1,97 @@
+filters:
+  and:
+    - file.ext == "md"
+    - '!file.inFolder("System")'
+    - type == "project"
+formulas:
+  openActions: 'file.backlinks.filter(value.properties.type == "task" && value.properties.status != "done" && !value.inFolder("Archive") && !value.inFolder("System") && list(value.properties.project).contains(file.asLink())).length'
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status.lower() == "active"
+    sort:
+      - column: file.mtime
+        direction: DESC
+    order:
+      - file.name
+      - area
+      - start
+      - target
+  - type: table
+    name: By status
+    filters:
+      and:
+        - status.lower() != "archived"
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - area
+      - target
+  - type: table
+    name: By area
+    filters:
+      and:
+        - status.lower() != "archived"
+    groupBy:
+      property: area
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - target
+  - type: table
+    name: Waiting
+    filters:
+      and:
+        - status.lower() == "waiting"
+    order:
+      - file.name
+      - area
+      - target
+  - type: table
+    name: Recently updated
+    filters:
+      and:
+        - status.lower() != "archived"
+    sort:
+      - column: file.mtime
+        direction: DESC
+    order:
+      - file.name
+      - status
+      - area
+  - type: table
+    name: Needs review
+    filters:
+      and:
+        - status.lower() == "active"
+        - file.mtime < now() - "14d"
+    order:
+      - file.name
+      - file.mtime
+      - area
+    sort:
+      - column: file.mtime
+        direction: ASC
+  - type: table
+    name: Archived
+    filters:
+      and:
+        - status.lower() == "archived"
+    order:
+      - file.name
+      - area
+  - type: table
+    name: No open action
+    filters:
+      and:
+        - status.lower() == "active"
+        - formula.openActions == 0
+    order:
+      - file.name
+      - area
+      - formula.openActions

@@ -1,0 +1,582 @@
+{
+  "choices": [
+    {
+      "id": "para-capture-thought",
+      "name": "Capture Thought",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Fleeting Note.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Thought title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Inbox"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-capture-url",
+      "name": "Capture URL",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/URL Capture.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:URL title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Inbox"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-capture-task",
+      "name": "Capture Task",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "id": "para-capture-task-macro",
+        "name": "Capture Task",
+        "commands": [
+          {
+            "id": "para-capture-task-step",
+            "name": "Capture Task",
+            "type": "Obsidian",
+            "commandId": "tasknotes:create-new-task"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para-new-project",
+      "name": "New Project",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Project.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Project name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Projects"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-new-area",
+      "name": "New Area",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Area.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Area name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Areas"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-new-resource",
+      "name": "New Resource",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Resource.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Resource name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Resources"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-new-permanent",
+      "name": "New Permanent Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Permanent Note.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Idea title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Notes/Permanent"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-new-literature",
+      "name": "New Literature Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Literature Note.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Source title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Notes/Literature"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-record-decision",
+      "name": "Record Decision",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Decision.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Decision title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Projects"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-start-experiment",
+      "name": "Start Experiment",
+      "type": "Template",
+      "command": true,
+      "templatePath": "System/Templates/Experiment.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Experiment title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Projects"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true
+      }
+    },
+    {
+      "id": "para-home",
+      "name": "Open Home",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "id": "para-home-macro",
+        "name": "Open Home",
+        "commands": [
+          {
+            "id": "para-home-step",
+            "name": "Open Home",
+            "type": "OpenFile",
+            "filePath": "Home.md",
+            "location": "reuse",
+            "focus": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "para-inbox",
+      "name": "Process Inbox",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "id": "para-inbox-macro",
+        "name": "Process Inbox",
+        "commands": [
+          {
+            "id": "para-inbox-step",
+            "name": "Process Inbox",
+            "type": "OpenFile",
+            "filePath": "System/Bases/Inbox.base",
+            "location": "reuse",
+            "focus": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "para-projects",
+      "name": "Open Active Projects",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "id": "para-projects-macro",
+        "name": "Open Active Projects",
+        "commands": [
+          {
+            "id": "para-projects-step",
+            "name": "Open Active Projects",
+            "type": "OpenFile",
+            "filePath": "System/Bases/Projects.base",
+            "location": "reuse",
+            "focus": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "para-weekly",
+      "name": "Open Weekly Review",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "id": "para-weekly-macro",
+        "name": "Open Weekly Review",
+        "commands": [
+          {
+            "id": "para-weekly-step",
+            "name": "Open Weekly Review",
+            "type": "Obsidian",
+            "commandId": "periodic-notes:open-weekly-note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para-monthly",
+      "name": "Open Monthly Review",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "id": "para-monthly-macro",
+        "name": "Open Monthly Review",
+        "commands": [
+          {
+            "id": "para-monthly-step",
+            "name": "Open Monthly Review",
+            "type": "Obsidian",
+            "commandId": "periodic-notes:open-monthly-note"
+          }
+        ]
+      }
+    }
+  ],
+  "inputPrompt": "single-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
+  "namePastedImagesAfterNoteTitle": false,
+  "searchNestedChoices": true,
+  "templateFolderLauncherRow": "bottom",
+  "devMode": false,
+  "templateFolderPaths": [
+    "System/Templates"
+  ],
+  "announceUpdates": "major",
+  "version": "2.24.2",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
+  "disableOnlineFeatures": true,
+  "enableUriCallbacks": false,
+  "enableRibbonIcon": false,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "dateAliases": {
+    "t": "today",
+    "tm": "tomorrow",
+    "yd": "yesterday",
+    "nw": "next week",
+    "nm": "next month",
+    "ny": "next year",
+    "lw": "last week",
+    "lm": "last month",
+    "ly": "last year"
+  },
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\\text{new}}:=w_{ij}^{\\text{current}}+\\eta\\cdot\\delta_j\\cdot x_{ij}$$ on a separate line, but you can write \"($\\eta$ = learning rate, $\\delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "id": "openai",
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "kind": "openai",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-5.5",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4-mini",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4-nano",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-4.1",
+            "maxTokens": 1047576,
+            "maxOutputTokens": 32768,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-4.1-mini",
+            "maxTokens": 1047576,
+            "maxOutputTokens": 32768,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-4o",
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-4o-mini",
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
+          },
+          {
+            "name": "o3",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "o4-mini",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          }
+        ],
+        "autoSyncModels": true,
+        "modelSource": "modelsDev"
+      },
+      {
+        "id": "gemini",
+        "name": "Gemini",
+        "endpoint": "https://generativelanguage.googleapis.com",
+        "kind": "gemini",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gemini-3.5-flash",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-3.1-pro-preview",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-3.1-flash-lite",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-3-pro-preview",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-3-flash-preview",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-2.5-pro",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-2.5-flash",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gemini-2.5-flash-lite",
+            "maxTokens": 1048576,
+            "maxOutputTokens": 65536,
+            "supportsTemperature": true
+          }
+        ],
+        "autoSyncModels": true,
+        "modelSource": "modelsDev"
+      }
+    ],
+    "confirmToolCalls": "destructive"
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "consolidateFileExistsBehavior": true,
+    "repairTemplateFileExistsBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "backfillFileOpeningDefaults": true,
+    "setProviderModelDiscoveryMode": true,
+    "migrateProviderApiKeysToSecretStorage": true,
+    "migrateToMultipleTemplateFolders": true,
+    "refreshStaleDefaultModelSeeds": true,
+    "pinAiModelRefs": true
+  }
+}

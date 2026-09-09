@@ -1,0 +1,26 @@
+filters:
+  and:
+    - file.inFolder("Inbox")
+    - file.ext == "md"
+    - type != "hub"
+views:
+  - type: table
+    name: All to process
+    sort:
+      - column: file.ctime
+        direction: DESC
+    order:
+      - file.name
+      - type
+      - captured
+      - review
+  - type: table
+    name: AI review
+    filters:
+      and:
+        - origin == "ai"
+        - review == "pending"
+    order:
+      - file.name
+      - confidence
+      - captured

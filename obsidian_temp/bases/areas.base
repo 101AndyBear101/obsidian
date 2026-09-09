@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Active areas
+    filters:
+      and:
+        - file.inFolder("areas")
+        - kind == "area"
+    order:
+      - file.name
+      - status
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize: {}

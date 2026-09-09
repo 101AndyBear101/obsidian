@@ -1,0 +1,24 @@
+filters:
+  and:
+    - '!file.inFolder("System")'
+    - '!file.inFolder("Archive")'
+    - type == "decision"
+views:
+  - type: table
+    name: Current decisions
+    filters:
+      and:
+        - status == "active"
+    order:
+      - file.name
+      - project
+      - date
+  - type: table
+    name: All decisions
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - project
+      - date

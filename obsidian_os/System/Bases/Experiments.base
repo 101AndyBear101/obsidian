@@ -1,0 +1,24 @@
+filters:
+  and:
+    - '!file.inFolder("System")'
+    - '!file.inFolder("Archive")'
+    - type == "experiment"
+views:
+  - type: table
+    name: Active experiments
+    filters:
+      and:
+        - status == "running"
+    order:
+      - file.name
+      - project
+      - created
+  - type: table
+    name: All experiments
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - project
+      - created

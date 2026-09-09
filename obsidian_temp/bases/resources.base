@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Active resources
+    filters:
+      and:
+        - kind == "resource"
+    order:
+      - file.name
+      - project
+      - status
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize: {}

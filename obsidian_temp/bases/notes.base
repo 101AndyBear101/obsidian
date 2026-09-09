@@ -1,0 +1,24 @@
+views:
+  - type: table
+    name: Active notes
+    filters:
+      and:
+        - kind == "note"
+    order:
+      - file.name
+      - resource
+      - status
+      - type
+      - tags
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      note.type: 78
+  - type: cards
+    name: Notes gallery
+    filters:
+      and:
+        - file.inFolder("notes")
+        - kind == "note"
+        - status != "archive"

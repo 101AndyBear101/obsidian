@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Active projects
+    filters:
+      and:
+        - kind == "project"
+    order:
+      - file.name
+      - status
+      - area
+    sort:
+      - property: file.mtime
+        direction: DESC

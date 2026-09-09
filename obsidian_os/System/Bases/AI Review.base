@@ -1,0 +1,18 @@
+filters:
+  and:
+    - '!file.inFolder("System")'
+    - '!file.inFolder("Archive")'
+    - origin == "ai"
+    - review == "pending"
+views:
+  - type: table
+    name: Pending review
+    order:
+      - file.name
+      - type
+      - confidence
+      - project
+      - file.folder
+    sort:
+      - property: file.ctime
+        direction: DESC

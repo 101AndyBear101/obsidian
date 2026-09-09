@@ -1,0 +1,7 @@
+{
+  "daily": { "enabled": true, "format": "YYYY-MM-DD", "folder": "Periodic/Daily", "template": "System/Templates/Daily Note" },
+  "weekly": { "enabled": true, "format": "gggg-[W]ww", "folder": "Periodic/Weekly", "template": "System/Templates/Weekly Review" },
+  "monthly": { "enabled": true, "format": "YYYY-MM", "folder": "Periodic/Monthly", "template": "System/Templates/Monthly Review" },
+  "quarterly": { "enabled": false, "format": "YYYY-[Q]Q", "folder": "Periodic/Quarterly", "template": "" },
+  "yearly": { "enabled": false, "format": "YYYY", "folder": "Periodic/Yearly", "template": "" }
+}

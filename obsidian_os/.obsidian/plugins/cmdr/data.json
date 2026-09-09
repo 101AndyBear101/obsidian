@@ -1,0 +1,94 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": false,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "quickadd:choice:para-home",
+      "name": "Home",
+      "icon": "house",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-capture-thought",
+      "name": "Capture thought",
+      "icon": "pencil",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-capture-task",
+      "name": "New task",
+      "icon": "check-square",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-new-project",
+      "name": "New project",
+      "icon": "folder-plus",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-new-permanent",
+      "name": "New note",
+      "icon": "file-plus",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-record-decision",
+      "name": "Record decision",
+      "icon": "scale",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-start-experiment",
+      "name": "Start experiment",
+      "icon": "flask-conical",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-inbox",
+      "name": "Process Inbox",
+      "icon": "inbox",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-projects",
+      "name": "Active Projects",
+      "icon": "list",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:para-weekly",
+      "name": "Weekly review",
+      "icon": "calendar-check",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "textToolbarCommands": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [],
+    "editorMenuItems": [],
+    "fileMenuItems": []
+  },
+  "spacing": 0,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  },
+  "spacingReset": true
+}

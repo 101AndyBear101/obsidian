@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1788929543762,
+      "path": "Home.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1788929543762,
+      "path": "System/Bases/Inbox.base"
+    },
+    {
+      "type": "file",
+      "ctime": 1788929543762,
+      "path": "System/Bases/Projects.base"
+    },
+    {
+      "type": "file",
+      "ctime": 1788929543762,
+      "path": "System/TaskNotes/Views/tasks-default.base"
+    },
+    {
+      "type": "file",
+      "ctime": 1788929543762,
+      "path": "System/TaskNotes/Views/agenda-default.base"
+    },
+    {
+      "type": "file",
+      "ctime": 1788929543762,
+      "path": "Periodic/Weekly/Weekly Review.md"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+filters:
+  and:
+    - note.type == "task"
+    - '!file.inFolder("System")'
+    - '!file.inFolder("Archive")'
+    - list(project).contains(this.file.asLink())
+views:
+  - type: tasknotesTaskList
+    name: Open actions
+    filters:
+      and:
+        - status != "done"
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - scheduled
+      - contexts
+    sort:
+      - column: due
+        direction: ASC
+  - type: tasknotesTaskList
+    name: Completed
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.name
+      - completedDate

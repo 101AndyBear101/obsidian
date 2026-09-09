@@ -1,0 +1,30 @@
+filters:
+  and:
+    - file.inFolder("Notes")
+    - type == "literature" || type == "permanent"
+views:
+  - type: table
+    name: Needs processing
+    filters:
+      and:
+        - type == "literature"
+        - status != "processed"
+    sort:
+      - column: file.mtime
+        direction: DESC
+    order:
+      - file.name
+      - type
+      - status
+      - created
+  - type: table
+    name: Evergreen
+    filters:
+      and:
+        - type == "permanent"
+    sort:
+      - column: file.mtime
+        direction: DESC
+    order:
+      - file.name
+      - created

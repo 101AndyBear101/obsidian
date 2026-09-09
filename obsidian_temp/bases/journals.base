@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: Daily journals
+    filters:
+      and:
+        - kind == "note"
+        - type == "journal"
+    order:
+      - file.name
+      - resource
+      - status
+      - tags
+    sort:
+      - property: file.mtime
+        direction: DESC
